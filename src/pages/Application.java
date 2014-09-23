@@ -28,7 +28,7 @@ public class Application {
   registrationPageByAnnotation = new RegistrationPageByAnnotation(driver);
   registrationPageByDriver = new RegistrationPageByDriver();
   homePageByDriver = new HomePageByDriver(driver);
- 
+ //
   
  }
 }
