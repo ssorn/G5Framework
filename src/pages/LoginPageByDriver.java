@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import static libs.ConfigData.ui;
 import libs.CommonClass;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -72,4 +73,20 @@ public class LoginPageByDriver {
 //	  inputLoginEmail(email);
 //	  inputPassword(password);
 //	  clickButtonSignIn();
+ 
+ 
+ /*
+  * this method is used to check is used logged in or not
+  */
+ public boolean isUserLoggedin() throws ReflectiveOperationException, ReflectiveOperationException, Exception, Throwable	{
+	 if (driver.findElement(ui("xpath")) != null)	{
+		 return true;
+	 } else {
+		 log.info("");
+		 return false;
+	 }
+ }
+ 
+ 
+ 
 	 }

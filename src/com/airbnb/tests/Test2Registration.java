@@ -7,12 +7,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import static libs.Utill.testResult;
 import pages.Application;
+ 
 
 public class Test2Registration {
  private WebDriver driver;
  Application airBnB;
+ boolean isTestPassed = true;
 
    @Before
    public void setUp() throws Exception {
@@ -37,7 +39,12 @@ public class Test2Registration {
     airBnB.registrationPageByDriver.inputPassword("jajaja");
     airBnB.registrationPageByDriver.inputconfirmPassword("jajaja");
     airBnB.registrationPageByDriver.clickSighUpLink();
+    
+    // isTestPassed сразу задается true, и результат выполнения
+    isTestPassed=isTestPassed & airBnB.loginPageByDriver.isUserLoggedin();
         
+    testResult(isTestPassed);
+    
    }
 
    @After

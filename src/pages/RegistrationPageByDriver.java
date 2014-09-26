@@ -30,7 +30,7 @@ public class RegistrationPageByDriver	{
 //  nameFiled.clear();
 //  nameFiled.sendKeys(name);
 	 
-  webElements.inputText(name, "RegistrationPage.inputName");  // DZ сменить все икспасі на ключи из uamappingfile
+  webElements.inputText(name, "RegistrationPage.inputName");  
  }
 
  /*

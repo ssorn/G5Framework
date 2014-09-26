@@ -290,4 +290,17 @@ public void uploadImageUsingJS(String inputLocator, String pathToImage) throws C
 		  //send image to input tag
 		  inputField.sendKeys(pathToImage);
 		 }
+		  
+		  
+		  public void openNewWindow(String url) {
+			  ((JavascriptExecutor) driver).executeScript(
+			    "window.open(arguments[0])", url);
+
+			 }
+
+			 public void switchWindow(int numberOfWindow) {
+			  String handle = driver.getWindowHandles().toArray()[numberOfWindow]
+			    .toString();
+			  driver.switchTo().window(handle);
+			 }
 }

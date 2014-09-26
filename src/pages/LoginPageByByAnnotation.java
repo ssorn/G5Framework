@@ -41,6 +41,7 @@ public class LoginPageByByAnnotation {
     @FindBy(xpath = ".//a[@class='fb-button fb-blue btn icon-btn btn-block btn-large large padded-btn-block row-space-1 btn-facebook']")
     private WebElement fieldEmail;
     
+    
     /**
      * This method is used to input password in password field
      */
